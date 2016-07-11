@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Photo Gallery Using HTML and CSS</title>
+
+	<style type="text/css" media="screen">
+
+		#gallery{
+			/* Set the background to black */
+			background-color: black;
+			/* Set the text color to white */
+			color: white;
+			/* Put everything inside the gallery wrapper, center */
+			text-align: center;
+			/* Force the page to be at least 100% tall */
+			min-height: 100vh;
+		}
+
+		img{
+			/* I do nothing */
+		}
+
+		#middle img{
+			/* Set the width of the thumbnail images */
+			width: 15%;
+			/* Set the border properties in short-hand (width, style, color) */
+			border: 4px solid #555;
+/* 			border-width: 4px;
+			border-style: solid;
+			border-color: #555; */
+		}
+		#middle img:hover{
+			/* Make the border red when the user hovers over the image */
+			border: 4px solid red;
+			/* Make the mouse a hand when the user is over the pic */
+			cursor: pointer;
+		}
+		#bottom img{
+			/* Force the image to be 55% the width of the wrapper */
+			width: 55%;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<!-- Create a master wrapper for the whole gallery to live inside of -->
+	<div id="gallery">
+		<!-- Make the top layer div for the title -->
+		<div id="top">
+			<!-- Put our title inside an H2 tag -->
+			<h2>Image Gallery in HTML and CSS</h2>
+		</div>
+		<!-- Make the middle layer div to put our thumbnails in -->
+		<div id="middle">
+			<img src="images/image1.jpg" onclick="largePic.src='images/image1.jpg'">
+			<img src="images/image2.jpg" onmouseover="largePic.src='images/image2.jpg'">
+			<img src="images/image3.jpg" onmouseover="largePic.src='images/image3.jpg'">
+			<img src="images/image4.jpg" onmouseover="largePic.src='images/image4.jpg'">
+			<img src="images/image5.jpg" onmouseover="largePic.src='images/image5.jpg'">
+		</div>
+		<!-- Make the bottom div for our large preview -->
+		<div id="bottom">
+			<!-- Make the large preivew image -->
+			<img src="images/image1.jpg" name="largePic">
+		</div>
+	</div>
+
+</body>
+</html>
